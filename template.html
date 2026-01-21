@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пользователи</title>
+    <style type="text/css">
+        html {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            border: 2px solid rgb(200, 200, 200);
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        td,
+        th {
+            border: 1px solid rgb(190, 190, 190);
+            padding: 10px 20px;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        caption {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption><h3>Пользователи</h3></caption>
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>chat_id</th>
+                <th>name</th>
+                <th>username</th>
+                <th>height</th>
+                <th>weight</th>
+                <th>age</th>
+                <th>born_date</th>
+                <th>gender</th>
+                <th>level_of_activities</th>
+                <th>end_message</th>
+                <th>register_datetime</th>
+                <th>register_date</th>
+                <th>last_message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}<tr>
+                {% for value in user %}<td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+</body>
+
+</html>
